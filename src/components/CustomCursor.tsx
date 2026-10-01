@@ -56,7 +56,6 @@ export const CustomCursor: React.FC = () => {
 
     // RAF Loop for silky smooth interpolated ring movement
     const updateRingPosition = () => {
-      // Lerp (factor ~0.20 for responsive cyber-mechanical precision feel)
       const lerp = 0.20;
       ringPos.current.x += (mousePos.current.x - ringPos.current.x) * lerp;
       ringPos.current.y += (mousePos.current.y - ringPos.current.y) * lerp;
@@ -93,71 +92,71 @@ export const CustomCursor: React.FC = () => {
         isVisible ? 'opacity-100' : 'opacity-0'
       }`}
     >
-      {/* 1. Precision Lead Core Dot */}
+      {/* 1. Precision Lead Core Dot (Pure White, Zero Blur) */}
       <div
         ref={dotRef}
         className={`fixed top-0 left-0 rounded-full transition-transform duration-100 ${
           isClicking
-            ? 'w-1.5 h-1.5 bg-[#b2f1ff] shadow-[0_0_12px_#b2f1ff]'
+            ? 'w-1.5 h-1.5 bg-white scale-90'
             : isHovering
-            ? 'w-2 h-2 bg-[#b2f1ff] shadow-[0_0_14px_#b2f1ff]'
-            : 'w-1.5 h-1.5 bg-[#b2f1ff] shadow-[0_0_8px_rgba(178,241,255,0.9)]'
+            ? 'w-2 h-2 bg-white'
+            : 'w-1.5 h-1.5 bg-white'
         }`}
       />
 
-      {/* 2. Tactical Reticle Outer Chassis */}
+      {/* 2. Tactical Reticle Outer Chassis (Pure White, Zero Blur Effect) */}
       <div
         ref={ringRef}
         className={`fixed top-0 left-0 rounded-full border transition-all duration-300 ease-out flex items-center justify-center ${
           isClicking
-            ? 'w-6 h-6 border-[#b2f1ff] bg-[#b2f1ff]/20 shadow-[0_0_16px_rgba(178,241,255,0.6)] scale-90'
+            ? 'w-6 h-6 border-white bg-white/20 scale-90'
             : isTextInput
-            ? 'w-7 h-10 rounded-sm border-[#b2f1ff]/80 bg-[#5555b7]/10 shadow-[0_0_12px_rgba(85,85,183,0.5)]'
+            ? 'w-7 h-10 rounded-sm border-white bg-white/10'
             : isHovering
-            ? 'w-12 h-12 border-[#b2f1ff] bg-[#b2f1ff]/10 backdrop-blur-[1px] shadow-[0_0_20px_rgba(178,241,255,0.45)]'
-            : 'w-8 h-8 border-[#5555b7]/60 bg-transparent shadow-[0_0_10px_rgba(85,85,183,0.25)]'
+            ? 'w-12 h-12 border-white bg-white/10'
+            : 'w-8 h-8 border-white/60 bg-transparent'
         }`}
       >
-        {/* Reticle Targeting Crosshair Ticks (Top, Bottom, Left, Right) */}
+        {/* Reticle Targeting Crosshair Ticks (Top, Bottom, Left, Right) - Crisp White */}
         {!isTextInput && (
           <>
             {/* Top Tick */}
             <span
               className={`absolute top-0 left-1/2 -translate-x-1/2 w-[1.5px] transition-all duration-200 ${
-                isHovering ? 'h-2 bg-[#b2f1ff] shadow-[0_0_6px_#b2f1ff]' : 'h-1.5 bg-[#b2f1ff]/70'
+                isHovering ? 'h-2 bg-white' : 'h-1.5 bg-white/80'
               }`}
             />
             {/* Bottom Tick */}
             <span
               className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-[1.5px] transition-all duration-200 ${
-                isHovering ? 'h-2 bg-[#b2f1ff] shadow-[0_0_6px_#b2f1ff]' : 'h-1.5 bg-[#b2f1ff]/70'
+                isHovering ? 'h-2 bg-white' : 'h-1.5 bg-white/80'
               }`}
             />
             {/* Left Tick */}
             <span
               className={`absolute left-0 top-1/2 -translate-y-1/2 h-[1.5px] transition-all duration-200 ${
-                isHovering ? 'w-2 bg-[#b2f1ff] shadow-[0_0_6px_#b2f1ff]' : 'w-1.5 bg-[#b2f1ff]/70'
+                isHovering ? 'w-2 bg-white' : 'w-1.5 bg-white/80'
               }`}
             />
             {/* Right Tick */}
             <span
               className={`absolute right-0 top-1/2 -translate-y-1/2 h-[1.5px] transition-all duration-200 ${
-                isHovering ? 'w-2 bg-[#b2f1ff] shadow-[0_0_6px_#b2f1ff]' : 'w-1.5 bg-[#b2f1ff]/70'
+                isHovering ? 'w-2 bg-white' : 'w-1.5 bg-white/80'
               }`}
             />
           </>
         )}
 
-        {/* Text Input Bracket Markers */}
+        {/* Text Input Bracket Markers - Crisp White */}
         {isTextInput && (
           <div className="flex flex-col justify-between w-full h-full p-0.5">
             <div className="flex justify-between w-full">
-              <span className="w-1.5 h-0.5 bg-[#b2f1ff]" />
-              <span className="w-1.5 h-0.5 bg-[#b2f1ff]" />
+              <span className="w-1.5 h-0.5 bg-white" />
+              <span className="w-1.5 h-0.5 bg-white" />
             </div>
             <div className="flex justify-between w-full">
-              <span className="w-1.5 h-0.5 bg-[#b2f1ff]" />
-              <span className="w-1.5 h-0.5 bg-[#b2f1ff]" />
+              <span className="w-1.5 h-0.5 bg-white" />
+              <span className="w-1.5 h-0.5 bg-white" />
             </div>
           </div>
         )}
