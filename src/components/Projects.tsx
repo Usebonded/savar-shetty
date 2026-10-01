@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, Github, ArrowRight, ArrowUpRight, Search, Layers, Radio, Shield, Bot, Brain, TrendingUp, Navigation, Building, FolderGit2 } from 'lucide-react';
+import { ExternalLink, Github, Linkedin, ArrowRight, ArrowUpRight, Search, Layers, Radio, Shield, Bot, Brain, TrendingUp, Navigation, Building, FolderGit2 } from 'lucide-react';
 import { PROJECTS, ADDITIONAL_PROJECTS } from '../data/portfolioData';
 import { Project } from '../types';
 
@@ -71,8 +71,22 @@ const SecondaryProjectCard: React.FC<{
       </div>
 
       <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono-code text-white">
-        <span>{project.tags.slice(0, 3).join(' · ')}</span>
-        <ArrowUpRight className="w-4 h-4 text-white group-hover:text-[#E5E7EB] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+        <span className="truncate pr-2">{project.tags.slice(0, 2).join(' · ')}</span>
+        <div className="flex items-center gap-2 shrink-0">
+          {project.githubUrl && (
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              title={`View ${project.title} on GitHub`}
+              className="p-1.5 rounded-full bg-white/5 border border-white/15 text-white hover:bg-white hover:text-black transition-colors"
+            >
+              <Github className="w-3.5 h-3.5" />
+            </a>
+          )}
+          <ArrowUpRight className="w-4 h-4 text-white group-hover:text-[#E5E7EB] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+        </div>
       </div>
     </div>
   );
@@ -108,8 +122,20 @@ const RelevantLearningCard: React.FC<{
           {extra.description}
         </p>
       </div>
-      <div className="mt-4 pt-3 border-t border-white/5 text-[11px] font-mono-code text-white">
-        {extra.tech}
+      <div className="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] font-mono-code text-white">
+        <span className="truncate pr-2">{extra.tech}</span>
+        {extra.linkedinUrl && (
+          <a
+            href={extra.linkedinUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            title="View Certification on LinkedIn"
+            className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#0077b5]/20 hover:bg-[#0077b5]/40 text-[#70b5f9] border border-[#0077b5]/40 text-[10px] font-mono-code transition-colors shrink-0"
+          >
+            <Linkedin className="w-3 h-3" />
+            <span>Verify</span>
+          </a>
+        )}
       </div>
     </div>
   );
@@ -203,7 +229,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                   {flagshipAres.shortDescription}
                 </p>
 
-                <div className="flex items-center gap-8 pt-5 border-t border-white/10 text-xs font-mono-code text-white uppercase tracking-widest">
+                <div className="flex items-center gap-4 sm:gap-8 pt-5 border-t border-white/10 text-xs font-mono-code text-white uppercase tracking-widest">
                   <div>
                     <span className="block text-white mb-0.5">Latency Target</span>
                     &lt;95ms P99
@@ -212,8 +238,19 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                     <span className="block text-white mb-0.5">Detection SLA</span>
                     98.6% Accuracy
                   </div>
-                  <div className="ml-auto">
-                    <div className="w-11 h-11 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-colors bg-white/5 backdrop-blur-md">
+                  <div className="ml-auto flex items-center gap-2.5">
+                    <a
+                      href={flagshipAres.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      title="View A.R.G.U.S on GitHub"
+                      className="px-3.5 py-2 rounded-full border border-white/20 flex items-center gap-1.5 text-white hover:bg-white hover:text-black transition-colors bg-white/5 backdrop-blur-md font-mono-code text-xs font-normal"
+                    >
+                      <Github className="w-3.5 h-3.5" />
+                      <span className="hidden sm:inline">GitHub</span>
+                    </a>
+                    <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-colors bg-white/5 backdrop-blur-md">
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                     </div>
                   </div>
@@ -244,7 +281,17 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                 <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/30 to-transparent" />
               </div>
 
-              <div className="absolute top-6 right-6 z-20">
+              <div className="absolute top-6 right-6 z-20 flex items-center gap-2">
+                <a
+                  href={cardGateway.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  title="View MMA on GitHub"
+                  className="w-9 h-9 rounded-full bg-white/10 backdrop-blur flex items-center justify-center border border-white/20 text-white hover:bg-white hover:text-black transition-colors"
+                >
+                  <Github className="w-4 h-4" />
+                </a>
                 <div className="w-9 h-9 rounded-full bg-white/5 backdrop-blur flex items-center justify-center border border-white/10 group-hover:bg-white group-hover:text-black transition-colors">
                   <span className="font-bricolage text-xs font-medium">02</span>
                 </div>
@@ -286,7 +333,17 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                 <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/30 to-transparent" />
               </div>
 
-              <div className="absolute top-6 right-6 z-20">
+              <div className="absolute top-6 right-6 z-20 flex items-center gap-2">
+                <a
+                  href={cardTitan.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  title="View V.A.L.I.D on GitHub"
+                  className="w-9 h-9 rounded-full bg-white/10 backdrop-blur flex items-center justify-center border border-white/20 text-white hover:bg-white hover:text-black transition-colors"
+                >
+                  <Github className="w-4 h-4" />
+                </a>
                 <div className="w-9 h-9 rounded-full bg-white/5 backdrop-blur flex items-center justify-center border border-white/10 group-hover:bg-white group-hover:text-black transition-colors">
                   <span className="font-bricolage text-xs font-medium">03</span>
                 </div>
@@ -333,15 +390,26 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
                 Course work and Workshops
               </h3>
             </div>
-            <a
-              href="https://github.com/Usebonded"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs font-mono-code text-white hover:text-white flex items-center gap-1.5"
-            >
-              <Github className="w-4 h-4" />
-              <span>@Usebonded Manifest</span>
-            </a>
+            <div className="flex items-center gap-3">
+              <a
+                href="https://www.linkedin.com/in/savar-shetty-usebonded/details/certifications/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-mono-code text-[#70b5f9] hover:underline flex items-center gap-1.5"
+              >
+                <Linkedin className="w-4 h-4" />
+                <span>LinkedIn Certifications</span>
+              </a>
+              <a
+                href="https://github.com/Usebonded"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-mono-code text-white hover:text-white flex items-center gap-1.5 hidden sm:flex"
+              >
+                <Github className="w-4 h-4" />
+                <span>@Usebonded</span>
+              </a>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

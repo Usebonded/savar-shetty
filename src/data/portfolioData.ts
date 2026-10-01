@@ -34,8 +34,8 @@ export const PROJECTS: Project[] = [
       'Real-time fraud detection system for banking transactions and IoT POS terminals (ESP32) utilizing ensemble machine learning.',
     image: '/src/assets/images/project_distributed_stream_1790672972073.jpg',
     tags: ['Python', 'Machine Learning', 'ESP32', 'IoT POS', 'Ensembles', 'REST APIs'],
-    githubUrl: 'https://github.com/Usebonded/ARGUS-Risk-Assessment',
-    demoUrl: 'https://github.com/Usebonded',
+    githubUrl: 'https://github.com/Usebonded/A.R.G.U.S',
+    demoUrl: 'https://github.com/Usebonded/A.R.G.U.S',
     featured: true,
     caseStudy: {
       clientOrContext: 'Banking Security & IoT POS Hardware',
@@ -70,8 +70,8 @@ export const PROJECTS: Project[] = [
       'Multi-modal AI assistant integrating vision, audio, and language reasoning for dynamic, contextual, agentic workflows.',
     image: '/src/assets/images/project_multimodal_rag_1790672956924.jpg',
     tags: ['Python', 'LLMs', 'Computer Vision', 'Audio Processing', 'Agentic Workflows'],
-    githubUrl: 'https://github.com/Usebonded/MMA-MultiModel-Assistant',
-    demoUrl: 'https://github.com/Usebonded',
+    githubUrl: 'https://github.com/Usebonded/MMA',
+    demoUrl: 'https://github.com/Usebonded/MMA',
     featured: true,
     caseStudy: {
       clientOrContext: 'Solo Research & Engineering Project',
@@ -106,8 +106,8 @@ export const PROJECTS: Project[] = [
       'AI-generated voice detection system built for Smart India Hackathon 2026 (Aug) to identify synthetic speech and audio clones.',
     image: '/src/assets/images/project_neural_vision_1790672991186.jpg',
     tags: ['Smart India Hackathon 2026', 'Python', 'Audio Forensics', 'Deep Learning', 'Hackathon Lead'],
-    githubUrl: 'https://github.com/Usebonded/VALID-Voice-Detection',
-    demoUrl: 'https://github.com/Usebonded',
+    githubUrl: 'https://github.com/Usebonded/V.A.L.I.D',
+    demoUrl: 'https://github.com/Usebonded/V.A.L.I.D',
     featured: true,
     caseStudy: {
       clientOrContext: 'Smart India Hackathon 2026',
@@ -142,8 +142,8 @@ export const PROJECTS: Project[] = [
       'Automated trading system powered by Reinforcement Learning, built at Synapse Hackathon 2026 (Jan) with a 4-person team.',
     image: '/src/assets/images/project_distributed_stream_1790672972073.jpg',
     tags: ['Synapse Hackathon 2026', 'Python', 'Reinforcement Learning', 'Gymnasium', 'Pandas'],
-    githubUrl: 'https://github.com/Usebonded/RL-Trading-Bot',
-    demoUrl: 'https://github.com/Usebonded',
+    githubUrl: 'https://github.com/Usebonded/rl-trading-bot',
+    demoUrl: 'https://github.com/Usebonded/rl-trading-bot',
     featured: false,
     caseStudy: {
       clientOrContext: 'Synapse Hackathon 2026',
@@ -178,8 +178,8 @@ export const PROJECTS: Project[] = [
       'AI-powered emergency dispatch command center engineered for Smart India Hackathon 2025 (Aug) to optimize disaster relief logistics in real time.',
     image: '/src/assets/images/project_neural_vision_1790672991186.jpg',
     tags: ['Smart India Hackathon 2025', 'Computer Vision', 'Routing Algorithms', 'Python', 'React'],
-    githubUrl: 'https://github.com/Usebonded/MeshRoute-Ops',
-    demoUrl: 'https://github.com/Usebonded',
+    githubUrl: 'https://github.com/Usebonded/meshroute.ops',
+    demoUrl: 'https://github.com/Usebonded/meshroute.ops',
     featured: false,
     caseStudy: {
       clientOrContext: 'Smart India Hackathon 2025',
@@ -214,8 +214,8 @@ export const PROJECTS: Project[] = [
       'Centralized hostel administrative system built to streamline operations and improve the day-to-day student experience.',
     image: '/src/assets/images/project_multimodal_rag_1790672956924.jpg',
     tags: ['React', 'JavaScript', 'Full-Stack', 'UI/UX Design', 'Freelance Project'],
-    githubUrl: 'https://github.com/Usebonded/HostelEase-System',
-    demoUrl: 'https://github.com/Usebonded',
+    githubUrl: 'https://github.com/Usebonded/HostelEase',
+    demoUrl: 'https://github.com/Usebonded/HostelEase',
     featured: false,
     caseStudy: {
       clientOrContext: 'Freelance Project · Symbiosis Hostel',
@@ -250,8 +250,8 @@ export const PROJECTS: Project[] = [
       'Engineered during June 2026 Software Internship: Full-stack healthcare operations dashboard tracking donor blood groups, hospital inventories, and emergency alerts.',
     image: '/src/assets/images/project_distributed_stream_1790672972073.jpg',
     tags: ['React', 'Node.js', 'REST APIs', 'HealthTech', 'Internship 2026'],
-    githubUrl: 'https://github.com/Usebonded/Blood-Donation-Dashboard',
-    demoUrl: 'https://github.com/Usebonded',
+    githubUrl: 'https://github.com/Usebonded/blood-donation-dashboard-',
+    demoUrl: 'https://github.com/Usebonded/blood-donation-dashboard-',
     featured: false,
     caseStudy: {
       clientOrContext: 'Healthcare Systems Operations · Internship',
@@ -286,8 +286,8 @@ export const PROJECTS: Project[] = [
       'Campus digital payments platform with student balance management and vendor payment settlement.',
     image: '/src/assets/images/project_multimodal_rag_1790672956924.jpg',
     tags: ['Project Lead', 'Full-Stack', 'JavaScript', 'Security APIs', 'FinTech'],
-    githubUrl: 'https://github.com/Usebonded/Campus-Wallet',
-    demoUrl: 'https://github.com/Usebonded',
+    githubUrl: 'https://github.com/Usebonded/campus-wallet-pro',
+    demoUrl: 'https://github.com/Usebonded/campus-wallet-pro',
     featured: false,
     caseStudy: {
       clientOrContext: 'Campus FinTech Infrastructure',
@@ -322,8 +322,8 @@ export const PROJECTS: Project[] = [
       'Comprehensive algorithmic library implementing trees, graphs, dynamic programming, and sorting benchmarks.',
     image: '/src/assets/images/project_neural_vision_1790672991186.jpg',
     tags: ['Author', 'C/C++', 'Java', 'Python', 'Data Structures'],
-    githubUrl: 'https://github.com/Usebonded/DSA-Core-Library',
-    demoUrl: 'https://github.com/Usebonded',
+    githubUrl: 'https://github.com/Usebonded/Data-Algorithum',
+    demoUrl: 'https://github.com/Usebonded/Data-Algorithum',
     featured: false,
     caseStudy: {
       clientOrContext: 'Core Algorithmic Engineering',
@@ -358,8 +358,8 @@ export const PROJECTS: Project[] = [
       'Stack balance game and intelligent Tic-Tac-Toe featuring minimax adversarial AI search.',
     image: '/src/assets/images/project_distributed_stream_1790672972073.jpg',
     tags: ['Creator', 'JavaScript', 'Canvas', 'CSS', 'Minimax AI'],
-    githubUrl: 'https://github.com/Usebonded/Browser-Interactive-Games',
-    demoUrl: 'https://github.com/Usebonded',
+    githubUrl: 'https://github.com/Usebonded/Tetris',
+    demoUrl: 'https://github.com/Usebonded/Tetris',
     featured: false,
     caseStudy: {
       clientOrContext: 'Creative Web & Game AI Engine',
@@ -393,35 +393,40 @@ export const ADDITIONAL_PROJECTS = [
     description:
       'Gained core skills in data cleaning, visualization, and basic statistical analysis using SQL, Excel, and Tableau. Demonstrated the ability to transform raw data into actionable insights for data-driven decision-making.',
     role: 'Coursera Coursework',
-    tech: 'SQL, Excel, Tableau, Statistical Analysis'
+    tech: 'SQL, Excel, Tableau, Statistical Analysis',
+    linkedinUrl: 'https://www.linkedin.com/in/savar-shetty-usebonded/details/certifications/'
   },
   {
     title: 'Advanced Data Analytics on Coursera',
     description:
       'Mastered complex predictive modeling, machine learning algorithms, and advanced statistical analysis using Python and R. Applied sophisticated analytics techniques to solve multi-faceted business problems and forecast future trends.',
     role: 'Coursera Advanced',
-    tech: 'Python, R, Predictive Modeling, Machine Learning'
+    tech: 'Python, R, Predictive Modeling, Machine Learning',
+    linkedinUrl: 'https://www.linkedin.com/in/savar-shetty-usebonded/details/certifications/'
   },
   {
     title: 'Business Analytics on Coursera',
     description:
       'Learned to evaluate business performance through quantitative methods, financial modeling, and strategic data interpretation. Bridged the gap between raw data analysis and high-level strategic business decision-making.',
     role: 'Coursera Specialization',
-    tech: 'Quantitative Methods, Financial Modeling, Strategy'
+    tech: 'Quantitative Methods, Financial Modeling, Strategy',
+    linkedinUrl: 'https://www.linkedin.com/in/savar-shetty-usebonded/details/certifications/'
   },
   {
     title: 'Google Campus Workshop on n8n',
     description:
       'Completed hands-on training in workflow automation and integration using the open-source n8n platform. Built automated nodes and API connections to streamline multi-step processes and optimize data pipelines.',
     role: 'Google Campus Workshop',
-    tech: 'n8n, Workflow Automation, API Nodes, Data Pipelines'
+    tech: 'n8n, Workflow Automation, API Nodes, Data Pipelines',
+    linkedinUrl: 'https://www.linkedin.com/in/savar-shetty-usebonded/details/certifications/'
   },
   {
     title: 'Google Campus Workshop on Cybersecurity',
     description:
       'Explored core security principles, risk management frameworks, and common threat mitigation strategies. Acquired practical awareness of network security, vulnerability assessments, and defensive protocols.',
     role: 'Google Campus Workshop',
-    tech: 'Network Security, Threat Mitigation, Vulnerability Assessment'
+    tech: 'Network Security, Threat Mitigation, Vulnerability Assessment',
+    linkedinUrl: 'https://www.linkedin.com/in/savar-shetty-usebonded/details/certifications/'
   }
 ];
 

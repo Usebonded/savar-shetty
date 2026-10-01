@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Search, Filter, ArrowUpRight, Github, ExternalLink, Sparkles, FolderGit2, Layers, Cpu, Shield, ArrowRight } from 'lucide-react';
+import { Search, Filter, ArrowUpRight, Github, Linkedin, ExternalLink, Sparkles, FolderGit2, Layers, Cpu, Shield, ArrowRight } from 'lucide-react';
 import { PROJECTS, ADDITIONAL_PROJECTS } from '../data/portfolioData';
 import { Project } from '../types';
 import { Link } from 'react-router-dom';
@@ -182,8 +182,22 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ onSelectProject }) =
                   <span className="flex items-center gap-1 text-[#b2f1ff] group-hover:underline">
                     Inspect Architecture &amp; Case Study
                   </span>
-                  <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white group-hover:bg-white group-hover:text-black transition-colors">
-                    <ArrowUpRight className="w-4 h-4" />
+                  <div className="flex items-center gap-2">
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        title={`View ${project.title} on GitHub`}
+                        className="w-8 h-8 rounded-full bg-white/5 border border-white/15 flex items-center justify-center text-white hover:bg-white hover:text-black transition-colors"
+                      >
+                        <Github className="w-3.5 h-3.5" />
+                      </a>
+                    )}
+                    <div className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white group-hover:bg-white group-hover:text-black transition-colors">
+                      <ArrowUpRight className="w-4 h-4" />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -203,15 +217,26 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ onSelectProject }) =
               Coursework Labs &amp; Intensive Workshops
             </h2>
           </div>
-          <a
-            href="https://github.com/Usebonded"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/15 bg-white/5 hover:bg-white/10 text-white font-mono-code text-xs transition-colors"
-          >
-            <Github className="w-4 h-4" />
-            <span>@Usebonded Repositories</span>
-          </a>
+          <div className="flex flex-wrap items-center gap-3">
+            <a
+              href="https://www.linkedin.com/in/savar-shetty-usebonded/details/certifications/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#0077b5]/40 bg-[#0077b5]/15 hover:bg-[#0077b5]/30 text-[#70b5f9] font-mono-code text-xs transition-colors"
+            >
+              <Linkedin className="w-4 h-4" />
+              <span>LinkedIn Certifications</span>
+            </a>
+            <a
+              href="https://github.com/Usebonded"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/15 bg-white/5 hover:bg-white/10 text-white font-mono-code text-xs transition-colors"
+            >
+              <Github className="w-4 h-4" />
+              <span>@Usebonded Repositories</span>
+            </a>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -232,8 +257,20 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ onSelectProject }) =
                   {extra.description}
                 </p>
               </div>
-              <div className="mt-4 pt-3 border-t border-white/5 text-[11px] font-mono-code text-white">
-                {extra.tech}
+              <div className="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] font-mono-code text-white">
+                <span className="truncate pr-2">{extra.tech}</span>
+                {extra.linkedinUrl && (
+                  <a
+                    href={extra.linkedinUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Verify on LinkedIn"
+                    className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#0077b5]/20 hover:bg-[#0077b5]/40 text-[#70b5f9] border border-[#0077b5]/40 text-[10px] font-mono-code transition-colors shrink-0"
+                  >
+                    <Linkedin className="w-3 h-3" />
+                    <span>Verify</span>
+                  </a>
+                )}
               </div>
             </div>
           ))}
